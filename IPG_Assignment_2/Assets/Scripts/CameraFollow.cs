@@ -9,6 +9,12 @@ public class CameraFollow : MonoBehaviour
     [Range(0f, 1f)]
     public float smoothSpeed = 0.125f;
 
+    public float xMin;
+    public float xMax;
+
+    public float zMin;
+    public float zMax;
+
     private void Start()
     {
         transform.position = target.position;
@@ -16,6 +22,10 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = Vector3.Lerp(transform.position, target.position, smoothSpeed * Time.deltaTime);
+        Vector3 targetPos = target.position;
+        targetPos.x = Mathf.Clamp(targetPos.x, xMin, xMax);
+        targetPos.z = Mathf.Clamp(targetPos.z, zMin, zMax);
+
+        transform.position = Vector3.Lerp(transform.position, targetPos, smoothSpeed * Time.deltaTime);
     }
 }
