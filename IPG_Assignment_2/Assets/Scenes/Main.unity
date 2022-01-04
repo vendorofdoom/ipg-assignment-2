@@ -1738,6 +1738,10 @@ PrefabInstance:
       value: cabinWall (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8557788434508016751, guid: 63946923ef5bd3c4484ebccd3d0ba005, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557788434508016751, guid: 63946923ef5bd3c4484ebccd3d0ba005, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -21972,6 +21976,10 @@ PrefabInstance:
       value: cabinFloor (1)
       objectReference: {fileID: 0}
     - target: {fileID: 902498357516126267, guid: 3100543648cea374aa7d7b35ff9eb09b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 902498357516126267, guid: 3100543648cea374aa7d7b35ff9eb09b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 0
       objectReference: {fileID: 0}
@@ -23530,6 +23538,10 @@ PrefabInstance:
     - target: {fileID: 5567220912668237404, guid: 7a573a96796fe8b4694b7110b00eb87f, type: 3}
       propertyPath: m_Name
       value: cabinCorner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567220912668237404, guid: 7a573a96796fe8b4694b7110b00eb87f, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5567220912668237404, guid: 7a573a96796fe8b4694b7110b00eb87f, type: 3}
       propertyPath: m_NavMeshLayer
@@ -41594,6 +41606,10 @@ PrefabInstance:
       value: cabinCorner (3)
       objectReference: {fileID: 0}
     - target: {fileID: 5567220912668237404, guid: 7a573a96796fe8b4694b7110b00eb87f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567220912668237404, guid: 7a573a96796fe8b4694b7110b00eb87f, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -46548,6 +46564,10 @@ PrefabInstance:
       value: cabinSideCenter (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8612904749076061048, guid: 7ce80b39dba9aa147b0ec3af0d701b4f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612904749076061048, guid: 7ce80b39dba9aa147b0ec3af0d701b4f, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -49818,7 +49838,8 @@ GameObject:
   - component: {fileID: 1565793245}
   - component: {fileID: 1565793247}
   - component: {fileID: 1565793246}
-  m_Layer: 0
+  - component: {fileID: 1565793248}
+  m_Layer: 7
   m_Name: Cabin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54630,6 +54651,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!65 &1565793248
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565793244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0646505, y: 1.7452074, z: 2.0501626}
+  m_Center: {x: 0.58867455, y: 0.80160373, z: 0.009205937}
 --- !u!1001 &1566476649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60258,6 +60292,10 @@ PrefabInstance:
       value: cabinCorner (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5567220912668237404, guid: 7a573a96796fe8b4694b7110b00eb87f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567220912668237404, guid: 7a573a96796fe8b4694b7110b00eb87f, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -60783,6 +60821,10 @@ PrefabInstance:
     - target: {fileID: 8557788434508016751, guid: 63946923ef5bd3c4484ebccd3d0ba005, type: 3}
       propertyPath: m_Name
       value: cabinWall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557788434508016751, guid: 63946923ef5bd3c4484ebccd3d0ba005, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8557788434508016751, guid: 63946923ef5bd3c4484ebccd3d0ba005, type: 3}
       propertyPath: m_NavMeshLayer
@@ -66617,6 +66659,10 @@ PrefabInstance:
       value: cabinSideCenter (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8612904749076061048, guid: 7ce80b39dba9aa147b0ec3af0d701b4f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612904749076061048, guid: 7ce80b39dba9aa147b0ec3af0d701b4f, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -69320,6 +69366,10 @@ PrefabInstance:
     - target: {fileID: 8557788434508016751, guid: 63946923ef5bd3c4484ebccd3d0ba005, type: 3}
       propertyPath: m_Name
       value: cabinWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557788434508016751, guid: 63946923ef5bd3c4484ebccd3d0ba005, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8557788434508016751, guid: 63946923ef5bd3c4484ebccd3d0ba005, type: 3}
       propertyPath: m_NavMeshLayer
@@ -73562,6 +73612,10 @@ PrefabInstance:
       value: cabinRoof
       objectReference: {fileID: 0}
     - target: {fileID: 7954650327243069881, guid: 3811e106698eb6241b699fb47da9bd44, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954650327243069881, guid: 3811e106698eb6241b699fb47da9bd44, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -73895,6 +73949,10 @@ PrefabInstance:
       value: cabinFloor
       objectReference: {fileID: 0}
     - target: {fileID: 902498357516126267, guid: 3100543648cea374aa7d7b35ff9eb09b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 902498357516126267, guid: 3100543648cea374aa7d7b35ff9eb09b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 0
       objectReference: {fileID: 0}
@@ -73990,6 +74048,10 @@ PrefabInstance:
     - target: {fileID: 8557788434508016751, guid: 63946923ef5bd3c4484ebccd3d0ba005, type: 3}
       propertyPath: m_Name
       value: cabinWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557788434508016751, guid: 63946923ef5bd3c4484ebccd3d0ba005, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8557788434508016751, guid: 63946923ef5bd3c4484ebccd3d0ba005, type: 3}
       propertyPath: m_NavMeshLayer
@@ -74817,6 +74879,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lightpostHanging
       objectReference: {fileID: 0}
+    - target: {fileID: 4345544238758222409, guid: e9ea4623ad903a9498828bfca35ba147, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9ea4623ad903a9498828bfca35ba147, type: 3}
 --- !u!1001 &3811933388106118405
@@ -75276,6 +75342,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5798689585111424800, guid: f987379c8d0fd8449a2a2cd5fa4c8c14, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798689585111424800, guid: f987379c8d0fd8449a2a2cd5fa4c8c14, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -75286,6 +75356,10 @@ PrefabInstance:
     - target: {fileID: 7050855993390608914, guid: f987379c8d0fd8449a2a2cd5fa4c8c14, type: 3}
       propertyPath: m_Name
       value: cabinDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7050855993390608914, guid: f987379c8d0fd8449a2a2cd5fa4c8c14, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7050855993390608914, guid: f987379c8d0fd8449a2a2cd5fa4c8c14, type: 3}
       propertyPath: m_NavMeshLayer
@@ -75517,6 +75591,10 @@ PrefabInstance:
     - target: {fileID: 4403856503555545224, guid: ea1a4c39fd4fe57468fcd77d01f12a09, type: 3}
       propertyPath: m_Name
       value: cabinRoofChimney
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403856503555545224, guid: ea1a4c39fd4fe57468fcd77d01f12a09, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4403856503555545224, guid: ea1a4c39fd4fe57468fcd77d01f12a09, type: 3}
       propertyPath: m_NavMeshLayer
@@ -76354,6 +76432,10 @@ PrefabInstance:
       value: cabinCorner
       objectReference: {fileID: 0}
     - target: {fileID: 5567220912668237404, guid: 7a573a96796fe8b4694b7110b00eb87f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567220912668237404, guid: 7a573a96796fe8b4694b7110b00eb87f, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -76973,6 +77055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: log_stackLarge
       objectReference: {fileID: 0}
+    - target: {fileID: 8889384516612449736, guid: 7c1d28eaa24d16040a1aa80eb8fdeaa1, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c1d28eaa24d16040a1aa80eb8fdeaa1, type: 3}
 --- !u!4 &8734557880181434440 stripped
@@ -77049,6 +77135,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1565793245}
     m_Modifications:
     - target: {fileID: 773373541172174886, guid: ef6054b8f4ec913438f8fe9c6012a237, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773373541172174886, guid: ef6054b8f4ec913438f8fe9c6012a237, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -77059,6 +77149,10 @@ PrefabInstance:
     - target: {fileID: 3477407925344639211, guid: ef6054b8f4ec913438f8fe9c6012a237, type: 3}
       propertyPath: m_Name
       value: cabinWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477407925344639211, guid: ef6054b8f4ec913438f8fe9c6012a237, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3477407925344639211, guid: ef6054b8f4ec913438f8fe9c6012a237, type: 3}
       propertyPath: m_NavMeshLayer
@@ -77124,6 +77218,10 @@ PrefabInstance:
     - target: {fileID: 8591659563898852695, guid: 49ded4fe956835546859ccf9216f9240, type: 3}
       propertyPath: m_Name
       value: log_stack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591659563898852695, guid: 49ded4fe956835546859ccf9216f9240, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8966777319485542381, guid: 49ded4fe956835546859ccf9216f9240, type: 3}
       propertyPath: m_RootOrder
