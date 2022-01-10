@@ -2,20 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class MouseControls : MonoBehaviour
 {
+    [Header("Cursor Icons")]
     public Texture2D cursorPlain;
     public Texture2D cursorNavTarget;
     public Texture2D cursorInteract;
     public Texture2D cursorAdd;
     public Texture2D cursorInfo;
 
+    [Header("Herdsperson Properties")]
     public HerdspersonController hpController;
-    public Transform herdspersonTransform;
-    public Inventory herdspersonInventory;
+    public Transform hpTransform;
+    public Inventory hpInventory;
+    public float hpReachDist;
 
-    public float reachDist;
+    [Header("NavMesh Properties")]
+    public float NavMeshClickHitDist;
 
     void Start()
     {
@@ -33,7 +38,7 @@ public class MouseControls : MonoBehaviour
 
     private void PickFlower(GameObject flower)
     {
-        herdspersonInventory.addFlower(flower.GetComponent<Flower>().flowerType); // Add to inventory
+        hpInventory.addFlower(flower.GetComponent<Flower>().flowerType); // Add to inventory
         flower.SetActive(false); // Flower picked so disappear!
 
     }
@@ -43,12 +48,11 @@ public class MouseControls : MonoBehaviour
         // Change cursor depending on mouse position and handle certain mouse down events
 
         // TODO: should change to a switch statement?
-
-
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit))
+
+        if (Physics.Raycast(ray, out hit) && !EventSystem.current.IsPointerOverGameObject()) // && !EventSystem.current.IsPointerOverGameObject() to check we're not over a UI element
         {
 
             // Interactable object hover
@@ -63,7 +67,7 @@ public class MouseControls : MonoBehaviour
             else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Collectible"))
             {
 
-                if (Vector3.Distance(hit.transform.position, herdspersonTransform.position) < reachDist)
+                if (Vector3.Distance(hit.transform.position, hpTransform.position) < hpReachDist)
                 {
                     Cursor.SetCursor(cursorAdd, new Vector2(cursorAdd.width / 2, cursorAdd.height / 2), CursorMode.Auto); // Center this cursor icon a la: https://wintermutedigital.com/post/2020-01-29-the-ultimate-guide-to-custom-cursors-in-unity/
 
@@ -71,7 +75,7 @@ public class MouseControls : MonoBehaviour
                     {
                         Debug.Log("Flower picked!");
                         PickFlower(hit.collider.gameObject);
-                        herdspersonInventory.DisplayUI();
+                        //hpInventory.DisplayUI();
                     }
                 
                 }
@@ -91,7 +95,7 @@ public class MouseControls : MonoBehaviour
             {
                 NavMeshHit navMeshHit;
 
-                if (NavMesh.SamplePosition(hit.transform.position, out navMeshHit, 0.2f, NavMesh.AllAreas))
+                if (NavMesh.SamplePosition(hit.transform.position, out navMeshHit, NavMeshClickHitDist, NavMesh.AllAreas))
                 {
                     Cursor.SetCursor(cursorNavTarget, Vector2.zero, CursorMode.Auto);
 
@@ -99,6 +103,10 @@ public class MouseControls : MonoBehaviour
                     {
                         hpController.SetNewTarget(hit.transform.position);
                     }
+                }
+                else
+                {
+                    Cursor.SetCursor(cursorPlain, Vector2.zero, CursorMode.Auto);
                 }
 
             }
