@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering.PostProcessing;
 
 public class MouseControls : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class MouseControls : MonoBehaviour
     [SerializeField]
     private Signpost signpost;
 
+    [Header("Post Processing")]
+    public PostProcessVolume postProcessVolume;
+    private ChromaticAberration chromaticAberration;
+    private ColorGrading colorGrading;
+
     bool IsMouseOverGameWindow //https://answers.unity.com/questions/973606/how-can-i-tell-if-the-mouse-is-over-the-game-windo.html
     {
         get
@@ -39,6 +45,8 @@ public class MouseControls : MonoBehaviour
     void Start()
     {
         Cursor.SetCursor(cursorPlain, Vector2.zero, CursorMode.Auto);
+        postProcessVolume.profile.TryGetSettings(out chromaticAberration);
+        postProcessVolume.profile.TryGetSettings(out colorGrading);
     }
 
     private void Update()
@@ -63,6 +71,7 @@ public class MouseControls : MonoBehaviour
                     break;
 
                 case ("Mushroom"):
+                    MushroomMouseover(hit.collider.gameObject);
                     break;
 
                 case ("Flower"):
@@ -89,6 +98,47 @@ public class MouseControls : MonoBehaviour
         {
             Cursor.SetCursor(cursorPlain, Vector2.zero, CursorMode.Auto);
         }
+    }
+
+    private void MushroomMouseover(GameObject mushroom)
+    {
+        Cursor.SetCursor(cursorAdd, new Vector2(cursorAdd.width / 2, cursorAdd.height / 2), CursorMode.Auto);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            StartCoroutine(Intoxicated(2.5f, 2.5f, 0f));
+            mushroom.SetActive(false);
+        }
+            
+    }
+
+    // https://gamedevbeginner.com/the-right-way-to-lerp-in-unity-with-examples
+    IEnumerator Intoxicated(float lerpInTime, float lerpOutTime, float duration)
+    {
+        float time = 0f;
+
+        while (time < lerpInTime)
+        {
+            chromaticAberration.intensity.value = Mathf.Lerp(0f, 1f, time / lerpInTime);
+            colorGrading.hueShift.value = Mathf.Lerp(0, 180, time / lerpInTime);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(duration);
+
+        while ((time >= lerpInTime) && (time < lerpInTime + lerpOutTime))
+        {
+
+            chromaticAberration.intensity.value = Mathf.Lerp(1f, 0f, (time - lerpInTime) / lerpOutTime);
+            colorGrading.hueShift.value = Mathf.Lerp(-180, 0, (time - lerpInTime) / lerpInTime);
+
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        chromaticAberration.intensity.value = 0f;
+        colorGrading.hueShift.value = 0f;
     }
 
     private void SignpostMouseover()

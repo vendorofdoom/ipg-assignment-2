@@ -12,8 +12,7 @@ public class Cow : MonoBehaviour
 
     [Header("UI")]
     public CowUI cowUI;
-    [SerializeField]
-    private ParticleSystem hearts;
+    public ParticleSystem hearts;
 
     [Header("Flowers")]
     public FlowersCollection flowerCollection;
@@ -80,7 +79,7 @@ public class Cow : MonoBehaviour
     {
         flowerCrown.SetActive(true);
         isWearingCrown = true;
-        behaviour = CowBehaviour.Follow;
+        behaviour = CowBehaviour.Follow; // TODO: Implement follow herdsperson logic
     }
 
 }

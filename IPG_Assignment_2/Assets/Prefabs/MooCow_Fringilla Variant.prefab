@@ -130,7 +130,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1e304343762dd814d9c3b2f6492890d9, type: 2}
     - target: {fileID: 3267441332241531006, guid: af3dcc8df92df9e4cace13b7abc425f9, type: 3}
       propertyPath: m_Name
-      value: MooCow_Fringilla
+      value: MooCow_Fringilla Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4271349926975838091, guid: af3dcc8df92df9e4cace13b7abc425f9, type: 3}
       propertyPath: m_Materials.Array.data[1]

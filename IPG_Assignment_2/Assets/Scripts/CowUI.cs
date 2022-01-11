@@ -61,6 +61,7 @@ public class CowUI : MonoBehaviour
             activeCow.flowerCollection.AddFlower(flowerType);
             UpdateUI();
             flowerHUD.UpdateUI();
+            activeCow.hearts.Emit(1);
         }
 
         // TODO: not sure if this is the best place to put this check, maybe move to cow update?
