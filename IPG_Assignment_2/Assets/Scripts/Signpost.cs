@@ -5,9 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class Signpost : MonoBehaviour
 {
+    public bool endGameCriteriaMet = false;
+    public List<Cow> Cows;
+
+
     private void OnMouseDown()
     {
-        // TODO: Only allow if all cows have their flower crowns on
-        SceneManager.LoadScene("Ending");
+        if (endGameCriteriaMet)
+        {
+            SceneManager.LoadScene("Ending");
+        }
+        else
+        {
+            // TODO: Display a hint saying to come back once all the cows have their crowns?
+        }
+    }
+
+    private void Update()
+    {
+
+        if (!endGameCriteriaMet)
+        {
+            bool allCowsInCrowns = true;
+            foreach (Cow c in Cows)
+            {
+                allCowsInCrowns &= c.isWearingCrown;
+            }
+            endGameCriteriaMet = allCowsInCrowns;
+        }
     }
 }

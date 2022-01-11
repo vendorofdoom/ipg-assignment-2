@@ -19,6 +19,7 @@ public class Cow : MonoBehaviour
     public FlowersCollection flowerCollection;
     [SerializeField]
     private GameObject flowerCrown;
+    public bool isWearingCrown = false;
 
     [Header("NavMesh")]
     [SerializeField]
@@ -78,6 +79,8 @@ public class Cow : MonoBehaviour
     public void WearFlowerCrown()
     {
         flowerCrown.SetActive(true);
+        isWearingCrown = true;
+        behaviour = CowBehaviour.Follow;
     }
 
 }

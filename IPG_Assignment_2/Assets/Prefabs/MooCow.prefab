@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 2421002857593789388}
   m_Layer: 9
   m_Name: MooCow
-  m_TagString: Untagged
+  m_TagString: Cow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5358,6 +5358,9 @@ MonoBehaviour:
   hearts: {fileID: 2421002857593789377}
   flowerCollection: {fileID: 0}
   flowerCrown: {fileID: 3904663846867799995}
+  isWearingCrown: 0
+  navMeshAgent: {fileID: 0}
+  target: {fileID: 0}
   behaviour: 0
   animator: {fileID: 0}
 --- !u!195 &2421002857593789388

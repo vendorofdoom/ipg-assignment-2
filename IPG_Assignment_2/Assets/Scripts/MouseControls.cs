@@ -12,6 +12,7 @@ public class MouseControls : MonoBehaviour
     public Texture2D cursorInteract;
     public Texture2D cursorAdd;
     public Texture2D cursorInfo;
+    public Texture2D cursorStar;
 
     [Header("Herdsperson Properties")]
     public HerdspersonController hpController;
@@ -23,92 +24,62 @@ public class MouseControls : MonoBehaviour
     [Header("NavMesh Properties")]
     public float NavMeshClickHitDist;
 
+    [Header("Signpost")]
+    [SerializeField]
+    private Signpost signpost;
+
+    bool IsMouseOverGameWindow //https://answers.unity.com/questions/973606/how-can-i-tell-if-the-mouse-is-over-the-game-windo.html
+    {
+        get
+        {
+            return !(0 > Input.mousePosition.x || 0 > Input.mousePosition.y || Screen.width < Input.mousePosition.x || Screen.height < Input.mousePosition.y);
+        }
+    }
+
     void Start()
     {
         Cursor.SetCursor(cursorPlain, Vector2.zero, CursorMode.Auto);
     }
 
-    //https://answers.unity.com/questions/973606/how-can-i-tell-if-the-mouse-is-over-the-game-windo.html
-    bool IsMouseOverGameWindow 
-    { 
-        get 
-        { 
-            return !(0 > Input.mousePosition.x || 0 > Input.mousePosition.y || Screen.width < Input.mousePosition.x || Screen.height < Input.mousePosition.y);
+    private void Update()
+    {
+        if (IsMouseOverGameWindow) // no point changing cursor if outside game window
+        {
+            HandleMouseInput();
         }
     }
-
-    private void PickFlower(GameObject flower)
-    {
-        hpInventory.AddFlower(flower.GetComponent<Flower>().flowerType);
-        flower.SetActive(false); // Flower picked so disappear!
-        flowerHUD.UpdateUI();
-
-    }
-
     private void HandleMouseInput()
     {
-        // Change cursor depending on mouse position and handle certain mouse down events
-
-        // TODO: should change to a switch statement?
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-
 
         if (Physics.Raycast(ray, out hit) && !EventSystem.current.IsPointerOverGameObject()) // && !EventSystem.current.IsPointerOverGameObject() to check we're not over a UI element
         {
 
-            // Interactable object hover
-            // TODO: Implement mouse click handle
-            if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Interactable"))
+
+            switch (hit.transform.gameObject.tag.ToString())
             {
-                Cursor.SetCursor(cursorInteract, Vector2.zero, CursorMode.Auto);
-            }
+                case ("Cabin"):
+                    break;
 
+                case ("Mushroom"):
+                    break;
 
-            // Collectible proximity hover and click handle
-            else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Collectible"))
-            {
+                case ("Flower"):
+                    FlowerMouseover(hit);
+                    break;
 
-                if (Vector3.Distance(hit.transform.position, hpTransform.position) < hpReachDist)
-                {
-                    Cursor.SetCursor(cursorAdd, new Vector2(cursorAdd.width / 2, cursorAdd.height / 2), CursorMode.Auto); // Center this cursor icon a la: https://wintermutedigital.com/post/2020-01-29-the-ultimate-guide-to-custom-cursors-in-unity/
+                case ("Signpost"):
+                    SignpostMouseover();
+                    break;
 
-                    if (Input.GetMouseButtonDown(0) & hit.collider.gameObject.CompareTag("Flower"))
-                    {
-                        PickFlower(hit.collider.gameObject);
-                    }
-                
-                }
+                case ("Cow"):
+                    Cursor.SetCursor(cursorInfo, Vector2.zero, CursorMode.Auto);
+                    break;
 
-            }
-
-
-            // Cow hover cursor
-            else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Cow"))
-            {
-                Cursor.SetCursor(cursorInfo, Vector2.zero, CursorMode.Auto);
-            }
-
-
-            // Check if we've hit navmesh and if mouse down, set a new target for the herdsperson
-            else
-            {
-                NavMeshHit navMeshHit;
-
-                if (NavMesh.SamplePosition(hit.transform.position, out navMeshHit, NavMeshClickHitDist, NavMesh.AllAreas))
-                {
-                    Cursor.SetCursor(cursorNavTarget, Vector2.zero, CursorMode.Auto);
-
-                    if (Input.GetMouseButtonDown(0))
-                    {
-                        hpController.SetNewTarget(hit.transform.position);
-                    }
-                }
-                else
-                {
-                    Cursor.SetCursor(cursorPlain, Vector2.zero, CursorMode.Auto);
-                }
-
+                default:
+                    NavMeshCheck(hit);
+                    break;
             }
 
         }
@@ -120,16 +91,48 @@ public class MouseControls : MonoBehaviour
         }
     }
 
+    private void SignpostMouseover()
+    {
+        if (signpost.endGameCriteriaMet)
+        {
+            Cursor.SetCursor(cursorStar, new Vector2(cursorStar.width / 2, cursorStar.height / 2), CursorMode.Auto);
+        }
+        else
+        {
+            Cursor.SetCursor(cursorInteract, Vector2.zero, CursorMode.Auto);
+        }
+    }
 
-    private void Update()
+    private void FlowerMouseover(RaycastHit hit)
     {
 
-        if (IsMouseOverGameWindow) // no point changing cursor if outside game window
+        if (Vector3.Distance(hit.transform.position, hpTransform.position) < hpReachDist)
         {
-            HandleMouseInput();
+            Cursor.SetCursor(cursorAdd, new Vector2(cursorAdd.width / 2, cursorAdd.height / 2), CursorMode.Auto); // Center this cursor icon a la: https://wintermutedigital.com/post/2020-01-29-the-ultimate-guide-to-custom-cursors-in-unity/
+            if (Input.GetMouseButtonDown(0))
+            {
+                hpInventory.AddFlower(hit.collider.gameObject.GetComponent<Flower>().flowerType);
+                hit.collider.gameObject.SetActive(false); // Flower picked so disappear!
+                flowerHUD.UpdateUI();
+            }
         }
-        
+    }
 
+    private void NavMeshCheck(RaycastHit hit)
+    {
+        NavMeshHit navMeshHit;
+        if (NavMesh.SamplePosition(hit.transform.position, out navMeshHit, NavMeshClickHitDist, NavMesh.AllAreas))
+        {
+            Cursor.SetCursor(cursorNavTarget, Vector2.zero, CursorMode.Auto);
+            if (Input.GetMouseButtonDown(0))
+            {
+                hpController.SetNewTarget(hit.transform.position);
+            }
+        }
+        else
+        {
+            Cursor.SetCursor(cursorPlain, Vector2.zero, CursorMode.Auto);
+        }
     }
 
 }

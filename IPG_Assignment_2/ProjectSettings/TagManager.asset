@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Herdsperson
   - Flower
+  - Cabin
+  - Signpost
+  - Mushroom
+  - Cow
   layers:
   - Default
   - TransparentFX

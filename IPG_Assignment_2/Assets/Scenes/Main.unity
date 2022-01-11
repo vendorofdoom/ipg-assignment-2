@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 7434b1d7f99ed484ea5d5c626f0db22b, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: e46f54774f0d830438d0244fd4c7c734, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -2863,7 +2863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &96686682
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12790,6 +12790,17 @@ MonoBehaviour:
   requiredPurpleFlowers: 2
   requiredPinkFlowers: 5
   requiredOrangeFlowers: 3
+--- !u!114 &358776120 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+  m_PrefabInstance: {fileID: 655440898840347089}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358776117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f709dfb20699faa48912523a15934535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &358776124 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8785164883791832053, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
@@ -14249,10 +14260,10 @@ RectTransform:
   m_Father: {fileID: 1023162949}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 201.88065, y: -39.4905}
+  m_SizeDelta: {x: 60, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &417130030
 MonoBehaviour:
@@ -23444,6 +23455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: flower1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5656530055317954517, guid: 929d848c54b3f1242a67c38be2466738, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 929d848c54b3f1242a67c38be2466738, type: 3}
 --- !u!4 &669754537 stripped
@@ -24546,7 +24561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &694977677
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32219,9 +32234,25 @@ MonoBehaviour:
   requiredPurpleFlowers: 5
   requiredPinkFlowers: 3
   requiredOrangeFlowers: 2
+--- !u!114 &904798875 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+  m_PrefabInstance: {fileID: 1945927957533239}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904798872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f709dfb20699faa48912523a15934535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &904798879 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8139514309383662393, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+  m_PrefabInstance: {fileID: 1945927957533239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &904798880 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2744224854335582531, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
   m_PrefabInstance: {fileID: 1945927957533239}
   m_PrefabAsset: {fileID: 0}
 --- !u!195 &904798881 stripped
@@ -34031,7 +34062,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fc9210610a68f7048a7466491e70e637, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -36036,6 +36067,17 @@ MonoBehaviour:
   requiredPurpleFlowers: 3
   requiredPinkFlowers: 2
   requiredOrangeFlowers: 5
+--- !u!114 &1007630607 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+  m_PrefabInstance: {fileID: 1851661110323948574}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007630604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f709dfb20699faa48912523a15934535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1007630611 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5249224991796895782, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
@@ -37378,10 +37420,10 @@ RectTransform:
   m_Father: {fileID: 1023162949}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 71.880646, y: -39.4905}
+  m_SizeDelta: {x: 60, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1057359293
 MonoBehaviour:
@@ -54853,7 +54895,7 @@ GameObject:
   - component: {fileID: 1565793248}
   m_Layer: 7
   m_Name: Cabin
-  m_TagString: Untagged
+  m_TagString: Cabin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -66685,10 +66727,10 @@ RectTransform:
   m_Father: {fileID: 1023162949}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 136.88065, y: -39.4905}
+  m_SizeDelta: {x: 60, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1762788790
 MonoBehaviour:
@@ -77741,6 +77783,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7bd8383fa12a749a50e8c0d0bfec88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endGameCriteriaMet: 0
+  Cows:
+  - {fileID: 358776120}
+  - {fileID: 1007630607}
+  - {fileID: 904798875}
+--- !u!4 &2071147125 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9214008809244276863, guid: bb3ec1a1986d84349a7688401fb54f4b, type: 3}
+  m_PrefabInstance: {fileID: 2415562819599102858}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2072327676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80745,7 +80797,7 @@ PrefabInstance:
     - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 543450652212614722}
+      objectReference: {fileID: 904798880}
     - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
       propertyPath: animator
       value: 
@@ -81200,7 +81252,7 @@ PrefabInstance:
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 543450651943610055}
+      objectReference: {fileID: 2071147125}
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: animator
       value: 
@@ -81707,7 +81759,7 @@ PrefabInstance:
     - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1180934811}
+      objectReference: {fileID: 2071147125}
     - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
       propertyPath: animator
       value: 
@@ -82232,6 +82284,10 @@ PrefabInstance:
     - target: {fileID: 8400740102214738629, guid: bb3ec1a1986d84349a7688401fb54f4b, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400740102214738629, guid: bb3ec1a1986d84349a7688401fb54f4b, type: 3}
+      propertyPath: m_TagString
+      value: Signpost
       objectReference: {fileID: 0}
     - target: {fileID: 9214008809244276863, guid: bb3ec1a1986d84349a7688401fb54f4b, type: 3}
       propertyPath: m_RootOrder
@@ -84725,6 +84781,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2853296496392973521, guid: 0d80a8a104b8f584d94efd9bbf9da1a1, type: 3}
+      propertyPath: signpost
+      value: 
+      objectReference: {fileID: 2071147124}
+    - target: {fileID: 2853296496392973521, guid: 0d80a8a104b8f584d94efd9bbf9da1a1, type: 3}
       propertyPath: flowerHUD
       value: 
       objectReference: {fileID: 1794953246}
@@ -84732,6 +84792,10 @@ PrefabInstance:
       propertyPath: reachDist
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2853296496392973521, guid: 0d80a8a104b8f584d94efd9bbf9da1a1, type: 3}
+      propertyPath: cursorStar
+      value: 
+      objectReference: {fileID: 2800000, guid: 47829a7285337014f9cf8a84539ef9bc, type: 3}
     - target: {fileID: 2853296496392973521, guid: 0d80a8a104b8f584d94efd9bbf9da1a1, type: 3}
       propertyPath: hpInventory
       value: 
