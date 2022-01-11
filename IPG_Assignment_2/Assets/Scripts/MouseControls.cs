@@ -34,6 +34,9 @@ public class MouseControls : MonoBehaviour
     private ChromaticAberration chromaticAberration;
     private ColorGrading colorGrading;
 
+    [Header("UI")]
+    public CanvasGroup narrativeUI;
+
     bool IsMouseOverGameWindow //https://answers.unity.com/questions/973606/how-can-i-tell-if-the-mouse-is-over-the-game-windo.html
     {
         get
@@ -68,6 +71,8 @@ public class MouseControls : MonoBehaviour
             switch (hit.transform.gameObject.tag.ToString())
             {
                 case ("Cabin"):
+
+                    CabinMouseover();
                     break;
 
                 case ("Mushroom"):
@@ -97,6 +102,15 @@ public class MouseControls : MonoBehaviour
         else
         {
             Cursor.SetCursor(cursorPlain, Vector2.zero, CursorMode.Auto);
+        }
+    }
+
+    private void CabinMouseover()
+    {
+        Cursor.SetCursor(cursorInfo, Vector2.zero, CursorMode.Auto);
+        if (Input.GetMouseButtonDown(0) && narrativeUI.gameObject.activeSelf != true)
+        {
+            narrativeUI.gameObject.SetActive(true);
         }
     }
 

@@ -2857,6 +2857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 96686682}
   - component: {fileID: 96686683}
+  - component: {fileID: 96686684}
   m_Layer: 5
   m_Name: Instructions
   m_TagString: Untagged
@@ -2893,6 +2894,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96686681}
   m_CullTransparentMesh: 1
+--- !u!225 &96686684
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96686681}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!4 &97644018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2221960900709227891, guid: d2d7be98b52dc9e408189f35aaf31736, type: 3}
@@ -33880,7 +33893,7 @@ Camera:
   far clip plane: 18
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -51275,7 +51288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 543450651943610055}
   smoothSpeed: 1
-  xMin: -5
+  xMin: -7
   xMax: 11
   zMin: -3
   zMax: 16
@@ -84397,6 +84410,10 @@ PrefabInstance:
       propertyPath: hpTransform
       value: 
       objectReference: {fileID: 543450651943610055}
+    - target: {fileID: 2853296496392973521, guid: 0d80a8a104b8f584d94efd9bbf9da1a1, type: 3}
+      propertyPath: narrativeUI
+      value: 
+      objectReference: {fileID: 96686684}
     - target: {fileID: 2853296496392973521, guid: 0d80a8a104b8f584d94efd9bbf9da1a1, type: 3}
       propertyPath: maxDistToCollect
       value: 2
