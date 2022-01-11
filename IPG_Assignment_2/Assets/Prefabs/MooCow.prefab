@@ -505,7 +505,6 @@ GameObject:
   - component: {fileID: 2421002857593789377}
   - component: {fileID: 2421002857593789376}
   - component: {fileID: 2421002857593789390}
-  - component: {fileID: 2421002857593789391}
   - component: {fileID: 2421002857593789388}
   m_Layer: 9
   m_Name: MooCow
@@ -5354,35 +5353,13 @@ MonoBehaviour:
   - Yennefer is wondering what's for dinner
   - Yennefer is pondering the meaning of life
   - Yennefer can't remember where she put her keys
-  wearingFlowers: 1
-  flowerCrown: {fileID: 3904663846867799995}
-  requiredPurpleFlowers: 3
-  requiredPinkFlowers: 2
-  requiredOrangeFlowers: 1
-  numPurpleFlowers: 0
-  numPinkFlowers: 0
-  numOrangeFlowers: 0
+  currStatus: 
+  cowUI: {fileID: 0}
   hearts: {fileID: 2421002857593789377}
-  cowStatsUI: {fileID: 0}
-  textName: {fileID: 0}
-  textAbout: {fileID: 0}
-  textPurpleFlowers: {fileID: 0}
-  textPinkFlowers: {fileID: 0}
-  textOrangeFlowers: {fileID: 0}
---- !u!114 &2421002857593789391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3267441332241531006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6306dd727aac3b4cbe2e1a390783198, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  flowerCollection: {fileID: 0}
+  flowerCrown: {fileID: 3904663846867799995}
   behaviour: 0
+  animator: {fileID: 0}
 --- !u!195 &2421002857593789388
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -12790,6 +12790,16 @@ MonoBehaviour:
   requiredPurpleFlowers: 2
   requiredPinkFlowers: 5
   requiredOrangeFlowers: 3
+--- !u!95 &358776124 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8785164883791832053, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+  m_PrefabInstance: {fileID: 655440898840347089}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &358776125 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 2918817733138364551, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+  m_PrefabInstance: {fileID: 655440898840347089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &359367729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32209,6 +32219,16 @@ MonoBehaviour:
   requiredPurpleFlowers: 5
   requiredPinkFlowers: 3
   requiredOrangeFlowers: 2
+--- !u!95 &904798879 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8139514309383662393, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+  m_PrefabInstance: {fileID: 1945927957533239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &904798881 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 2422875620979699787, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+  m_PrefabInstance: {fileID: 1945927957533239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &908349924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36016,6 +36036,16 @@ MonoBehaviour:
   requiredPurpleFlowers: 3
   requiredPinkFlowers: 2
   requiredOrangeFlowers: 5
+--- !u!95 &1007630611 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5249224991796895782, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+  m_PrefabInstance: {fileID: 1851661110323948574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &1007630612 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 1851661111751834452, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+  m_PrefabInstance: {fileID: 1851661110323948574}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1007710106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80713,6 +80743,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1794953245}
     - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 543450652212614722}
+    - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 904798879}
+    - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
       propertyPath: textName
       value: 
       objectReference: {fileID: 473420516}
@@ -80724,6 +80762,10 @@ PrefabInstance:
       propertyPath: cowStatsUI
       value: 
       objectReference: {fileID: 694977679}
+    - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+      propertyPath: navMeshAgent
+      value: 
+      objectReference: {fileID: 904798881}
     - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
       propertyPath: textPinkFlowers
       value: 
@@ -81156,6 +81198,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1794953245}
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 543450651943610055}
+    - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 358776124}
+    - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: textName
       value: 
       objectReference: {fileID: 473420516}
@@ -81167,6 +81217,10 @@ PrefabInstance:
       propertyPath: cowStatsUI
       value: 
       objectReference: {fileID: 694977679}
+    - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+      propertyPath: navMeshAgent
+      value: 
+      objectReference: {fileID: 358776125}
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: textPinkFlowers
       value: 
@@ -81651,6 +81705,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1794953245}
     - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1180934811}
+    - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1007630611}
+    - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
       propertyPath: textName
       value: 
       objectReference: {fileID: 473420516}
@@ -81662,6 +81724,10 @@ PrefabInstance:
       propertyPath: cowStatsUI
       value: 
       objectReference: {fileID: 694977679}
+    - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+      propertyPath: navMeshAgent
+      value: 
+      objectReference: {fileID: 1007630612}
     - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
       propertyPath: textPinkFlowers
       value: 
