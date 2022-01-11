@@ -481,7 +481,6 @@ GameObject:
   - component: {fileID: 2804142055719504920}
   - component: {fileID: 155723862117725017}
   - component: {fileID: 7554332483104611738}
-  - component: {fileID: 3859823266572415842}
   - component: {fileID: 2853296496392973521}
   m_Layer: 0
   m_Name: Herdsperson
@@ -560,18 +559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af44cd8bb889fb44aab36d0d673fbd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3859823266572415842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8881569260785667288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2941391e242d9814a8dd9b2f29c91f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2853296496392973521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,9 +577,11 @@ MonoBehaviour:
   cursorAdd: {fileID: 2800000, guid: 7da55349cae38f349a3631e91e9dde00, type: 3}
   cursorInfo: {fileID: 2800000, guid: 3cb27f90175768b4fbbf375afa3f4d1a, type: 3}
   hpController: {fileID: 7554332483104611738}
-  herdspersonTransform: {fileID: 0}
-  herdspersonInventory: {fileID: 0}
-  reachDist: 2
+  hpTransform: {fileID: 0}
+  hpInventory: {fileID: 0}
+  flowerHUD: {fileID: 0}
+  hpReachDist: 0
+  NavMeshClickHitDist: 0
 --- !u!1001 &4434592334513717451
 PrefabInstance:
   m_ObjectHideFlags: 0

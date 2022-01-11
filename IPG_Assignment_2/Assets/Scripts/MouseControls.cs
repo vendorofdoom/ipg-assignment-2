@@ -16,7 +16,8 @@ public class MouseControls : MonoBehaviour
     [Header("Herdsperson Properties")]
     public HerdspersonController hpController;
     public Transform hpTransform;
-    public Inventory hpInventory;
+    public FlowersCollection hpInventory;
+    public FlowerHUD flowerHUD;
     public float hpReachDist;
 
     [Header("NavMesh Properties")]
@@ -38,8 +39,9 @@ public class MouseControls : MonoBehaviour
 
     private void PickFlower(GameObject flower)
     {
-        hpInventory.addFlower(flower.GetComponent<Flower>().flowerType); // Add to inventory
+        hpInventory.AddFlower(flower.GetComponent<Flower>().flowerType);
         flower.SetActive(false); // Flower picked so disappear!
+        flowerHUD.UpdateUI();
 
     }
 
@@ -73,9 +75,7 @@ public class MouseControls : MonoBehaviour
 
                     if (Input.GetMouseButtonDown(0) & hit.collider.gameObject.CompareTag("Flower"))
                     {
-                        Debug.Log("Flower picked!");
                         PickFlower(hit.collider.gameObject);
-                        //hpInventory.DisplayUI();
                     }
                 
                 }

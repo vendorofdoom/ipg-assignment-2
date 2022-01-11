@@ -4,33 +4,18 @@ using UnityEngine;
 
 public class Cow : MonoBehaviour
 {
+    [Header("Info/Status")]
     public string cowName;
     public List<string> cowStatusOptions;
-    private string currStatus;
-    public bool wearingFlowers;
-    public GameObject flowerCrown;
+    public string currStatus;
 
-    public int requiredPurpleFlowers;
-    public int requiredPinkFlowers;
-    public int requiredOrangeFlowers;
-
-    public int numPurpleFlowers;
-    public int numPinkFlowers;
-    public int numOrangeFlowers;
-
+    [Header("UI")]
+    public CowUI cowUI;
     public ParticleSystem hearts;
-    public CanvasGroup cowStatsUI;
 
-    public TMPro.TextMeshProUGUI textName;
-    public TMPro.TextMeshProUGUI textAbout;
-    public TMPro.TextMeshProUGUI textPurpleFlowers;
-    public TMPro.TextMeshProUGUI textPinkFlowers;
-    public TMPro.TextMeshProUGUI textOrangeFlowers;
-
-
-    // TODO: Split some functionality out into CowInventory script perhaps?
-
-    // TODO: Implement ReceiveFlower()
+    [Header("Flowers")]
+    public FlowersCollection flowerCollection;
+    public GameObject flowerCrown;
 
     private void Start()
     {
@@ -46,23 +31,14 @@ public class Cow : MonoBehaviour
     private void OnMouseDown()
     {
         hearts.Emit(1);
-
-        textName.text = cowName;
-        textAbout.text = currStatus;
-        textPurpleFlowers.text = numPurpleFlowers.ToString() + "/" + requiredPurpleFlowers.ToString();
-        textPinkFlowers.text = numPinkFlowers.ToString() + "/" + requiredPinkFlowers.ToString();
-        textOrangeFlowers.text = numOrangeFlowers.ToString() + "/" + requiredOrangeFlowers.ToString();
-        
-        
-        if (cowStatsUI.gameObject.activeSelf != true)
-        {
-            cowStatsUI.gameObject.SetActive(true);
-        }
-            
+        cowUI.activeCow = this;
+        cowUI.UpdateUI();
+        cowUI.DisplayUI();
     }
 
-    private void Update()
+    public void WearFlowerCrown()
     {
-        flowerCrown.SetActive(wearingFlowers); // TODO: move out of update later
+        flowerCrown.SetActive(true);
     }
+
 }
