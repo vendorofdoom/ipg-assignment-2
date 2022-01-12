@@ -37,6 +37,8 @@ public class MouseControls : MonoBehaviour
     [Header("UI")]
     public CanvasGroup narrativeUI;
 
+    public LayerMask layerMask;
+
     bool IsMouseOverGameWindow //https://answers.unity.com/questions/973606/how-can-i-tell-if-the-mouse-is-over-the-game-windo.html
     {
         get
@@ -64,7 +66,7 @@ public class MouseControls : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit) && !EventSystem.current.IsPointerOverGameObject()) // && !EventSystem.current.IsPointerOverGameObject() to check we're not over a UI element
+        if (Physics.Raycast(ray, out hit, 100f, layerMask) && !EventSystem.current.IsPointerOverGameObject()) // && !EventSystem.current.IsPointerOverGameObject() to check we're not over a UI element
         {
 
 

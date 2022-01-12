@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 2421002857593789376}
   - component: {fileID: 2421002857593789390}
   - component: {fileID: 2421002857593789388}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: MooCow
   m_TagString: Cow
   m_Icon: {fileID: 0}

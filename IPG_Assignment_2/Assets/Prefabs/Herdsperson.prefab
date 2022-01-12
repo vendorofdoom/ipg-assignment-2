@@ -482,6 +482,9 @@ GameObject:
   - component: {fileID: 155723862117725017}
   - component: {fileID: 7554332483104611738}
   - component: {fileID: 2853296496392973521}
+  - component: {fileID: 3314489416776534984}
+  - component: {fileID: 4062665421504358972}
+  - component: {fileID: 2840408966178154378}
   m_Layer: 0
   m_Name: Herdsperson
   m_TagString: Untagged
@@ -559,6 +562,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af44cd8bb889fb44aab36d0d673fbd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedModified: 0
+  speedModifierTimeout: 5
 --- !u!114 &2853296496392973521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,6 +590,55 @@ MonoBehaviour:
   NavMeshClickHitDist: 0
   signpost: {fileID: 0}
   postProcessVolume: {fileID: 0}
+  narrativeUI: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &3314489416776534984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881569260785667288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58568dc2dd8dcc9469fb77131b5bce13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredPurpleFlowers: 1
+  requiredPinkFlowers: 1
+  requiredOrangeFlowers: 1
+--- !u!136 &4062665421504358972
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881569260785667288}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.02
+  m_Height: 0.05
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.01, z: 0}
+--- !u!54 &2840408966178154378
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881569260785667288}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1001 &4434592334513717451
 PrefabInstance:
   m_ObjectHideFlags: 0
