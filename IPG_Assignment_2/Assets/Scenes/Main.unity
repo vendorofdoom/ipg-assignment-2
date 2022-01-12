@@ -80429,6 +80429,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2071147125}
     - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+      propertyPath: cowName
+      value: Buttercup
+      objectReference: {fileID: 0}
+    - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 904798879}
@@ -80469,8 +80473,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1404299224}
     - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+      propertyPath: cowStatusOptions.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
       propertyPath: wanderDestinations.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+      propertyPath: cowStatusOptions.Array.data[0]
+      value: Buttercup is enjoying the sunny last days of summer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+      propertyPath: cowStatusOptions.Array.data[1]
+      value: Buttercup is thinking about chocolate milk
+      objectReference: {fileID: 0}
+    - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+      propertyPath: cowStatusOptions.Array.data[2]
+      value: Buttercup is trying to decide if she prefers purple or pink
+      objectReference: {fileID: 0}
+    - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+      propertyPath: cowStatusOptions.Array.data[3]
+      value: Buttercup is wondering if P=NP
+      objectReference: {fileID: 0}
+    - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+      propertyPath: cowStatusOptions.Array.data[4]
+      value: Buttercup is living her best life
       objectReference: {fileID: 0}
     - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
       propertyPath: wanderDestinations.Array.data[0].x
@@ -80578,7 +80606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3269227794697563129, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
       propertyPath: m_Name
-      value: MooCow_Triss
+      value: MooCow_Buttercup
       objectReference: {fileID: 0}
     - target: {fileID: 3906537168859440188, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
       propertyPath: m_IsActive
@@ -80996,12 +81024,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1404299224}
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+      propertyPath: cowStatusOptions.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: wanderDestinations.Array.size
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: cowStatusOptions.Array.data[0]
-      value: Muh-Muh is making an alliance with the elves
+      value: Muh-Muh is enjoying a delicious blade of grass
       objectReference: {fileID: 0}
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: cowStatusOptions.Array.data[1]
@@ -81014,6 +81046,10 @@ PrefabInstance:
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: cowStatusOptions.Array.data[3]
       value: Muh-Muh is thinking about something embarrassing she did two years ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+      propertyPath: cowStatusOptions.Array.data[4]
+      value: Muh-Muh is wondering where cheese comes from
       objectReference: {fileID: 0}
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: wanderDestinations.Array.data[0].x
@@ -81544,7 +81580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1545581474817089766, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
       propertyPath: m_Name
-      value: MooCow_Yennefer
+      value: MooCow_BigBertha
       objectReference: {fileID: 0}
     - target: {fileID: 1851661111751834452, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
       propertyPath: m_Speed
