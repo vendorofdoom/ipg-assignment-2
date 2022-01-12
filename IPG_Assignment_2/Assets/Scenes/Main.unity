@@ -33928,7 +33928,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fdd3704207c5c9c46a721d3b1250c95b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -54515,7 +54515,7 @@ GameObject:
   - component: {fileID: 1565793247}
   - component: {fileID: 1565793246}
   - component: {fileID: 1565793248}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cabin
   m_TagString: Cabin
   m_Icon: {fileID: 0}
@@ -80937,7 +80937,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2612317110976144181, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: m_Name
-      value: MooCow_Fringilla
+      value: MooCow_MuhMuh
       objectReference: {fileID: 0}
     - target: {fileID: 2918817733138364548, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: target
@@ -80951,6 +80951,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2071147125}
+    - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+      propertyPath: cowName
+      value: Muh-Muh
+      objectReference: {fileID: 0}
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: animator
       value: 
@@ -80994,6 +80998,22 @@ PrefabInstance:
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: wanderDestinations.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+      propertyPath: cowStatusOptions.Array.data[0]
+      value: Muh-Muh is making an alliance with the elves
+      objectReference: {fileID: 0}
+    - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+      propertyPath: cowStatusOptions.Array.data[1]
+      value: Muh-Muh is thinking about grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+      propertyPath: cowStatusOptions.Array.data[2]
+      value: Muh-Muh is ruminating
+      objectReference: {fileID: 0}
+    - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+      propertyPath: cowStatusOptions.Array.data[3]
+      value: Muh-Muh is thinking about something embarrassing she did two years ago
       objectReference: {fileID: 0}
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: wanderDestinations.Array.data[0].x
@@ -81543,6 +81563,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2071147125}
     - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+      propertyPath: cowName
+      value: Big Bertha
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 1007630611}
@@ -81585,6 +81609,30 @@ PrefabInstance:
     - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
       propertyPath: wanderDestinations.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+      propertyPath: cowStatusOptions.Array.data[0]
+      value: Big Bertha is feeling a gentle breeze on her face
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+      propertyPath: cowStatusOptions.Array.data[1]
+      value: Big Bertha is feeling excited for the cow parade today
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+      propertyPath: cowStatusOptions.Array.data[2]
+      value: Big Bertha has an itch she can't quite reach :(
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+      propertyPath: cowStatusOptions.Array.data[3]
+      value: Big Berthais wondering what's for dinner
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+      propertyPath: cowStatusOptions.Array.data[4]
+      value: Big Bertha is pondering the meaning of life
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+      propertyPath: cowStatusOptions.Array.data[5]
+      value: Big Bertha can't remember where she put her keys
       objectReference: {fileID: 0}
     - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
       propertyPath: wanderDestinations.Array.data[0].x
