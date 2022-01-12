@@ -5360,8 +5360,11 @@ MonoBehaviour:
   flowerCrown: {fileID: 3904663846867799995}
   isWearingCrown: 0
   navMeshAgent: {fileID: 0}
-  target: {fileID: 0}
+  followTarget: {fileID: 0}
   behaviour: 0
+  wanderDestinations: []
+  wanderTimeoutMin: 3
+  wanderTimeoutMax: 15
   animator: {fileID: 0}
 --- !u!195 &2421002857593789388
 NavMeshAgent:
@@ -5373,8 +5376,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.02
-  m_Speed: 2
-  m_Acceleration: 2
+  m_Speed: 1
+  m_Acceleration: 1
   avoidancePriority: 50
   m_AngularSpeed: 450
   m_StoppingDistance: 1.5

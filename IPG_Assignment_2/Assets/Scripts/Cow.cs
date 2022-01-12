@@ -24,13 +24,19 @@ public class Cow : MonoBehaviour
     [SerializeField]
     private NavMeshAgent navMeshAgent;
     [SerializeField]
-    private Transform target;
+    private Transform followTarget;
     [SerializeField]
     private CowBehaviour behaviour;
+    public List<Vector3> wanderDestinations;
+    public float wanderTimeoutMin = 1f;
+    public float wanderTimeoutMax = 10f;
+    private float timeout;
 
     [Header("Animation")]
     [SerializeField]
     private Animator animator;
+    
+    
 
     private enum CowBehaviour
     {
@@ -44,20 +50,35 @@ public class Cow : MonoBehaviour
         animator = GetComponent<Animator>();
         currStatus = cowStatusOptions[Random.Range(0, cowStatusOptions.Count)];
         InvokeRepeating("updateStatus", 30f, 30f);
+        timeout = Random.Range(0f, 1.5f);
     }
 
     private void Update()
     {
         switch (behaviour)
         {
-            case CowBehaviour.Wander:
-                //navMeshAgent.isStopped = true;
+            case CowBehaviour.Wander: // https://docs.unity3d.com/Manual/nav-AgentPatrol.html
+                if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 1.5f) // TODO: Assuming we don't need to handle case where we've swapped from wander to follow behaviour (i.e. cow will continue to old follow dest and not switch until there) but need to check in testing.
+                {
+                    if (timeout < 0.01f)
+                    {
+                        GoToNextPoint();
+                        timeout = Random.Range(wanderTimeoutMin, wanderTimeoutMax);
+                    }
+                    else
+                    {
+                        timeout = Mathf.Max(0f, timeout - Time.deltaTime);
+                    }
+
+                }
+                
                 break;
             case CowBehaviour.Follow:
-                navMeshAgent.SetDestination(target.position);
+                navMeshAgent.SetDestination(followTarget.position);
                 break;
         }
 
+        
         animator.SetBool("isWalking", navMeshAgent.velocity != Vector3.zero);
     }
 
@@ -80,6 +101,15 @@ public class Cow : MonoBehaviour
         flowerCrown.SetActive(true);
         isWearingCrown = true;
         behaviour = CowBehaviour.Follow; // TODO: Implement follow herdsperson logic
+    }
+
+    private void GoToNextPoint() // https://docs.unity3d.com/Manual/nav-AgentPatrol.html
+    {
+        if (wanderDestinations.Count == 0)
+            return;
+
+        navMeshAgent.destination = wanderDestinations[Random.Range(0, wanderDestinations.Count)];
+
     }
 
 }

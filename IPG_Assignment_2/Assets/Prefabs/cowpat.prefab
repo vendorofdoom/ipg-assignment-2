@@ -423,6 +423,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2615506326311800464}
+  - component: {fileID: 2082876656117729370}
+  - component: {fileID: 2649127408918526448}
   m_Layer: 0
   m_Name: cowpat
   m_TagString: Untagged
@@ -446,3 +448,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2082876656117729370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2615506326311800465}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10550976, y: 0.09704994, z: 0.11280072}
+  m_Center: {x: 0.0015854836, y: 0.032051444, z: 0.0014294982}
+--- !u!114 &2649127408918526448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2615506326311800465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbbf863950ee1045a11f1dcc74419b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowDownModifier: 0.1
+  speedUpModifier: 3

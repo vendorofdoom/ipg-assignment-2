@@ -116,14 +116,16 @@ public class MouseControls : MonoBehaviour
 
     private void MushroomMouseover(GameObject mushroom)
     {
-        Cursor.SetCursor(cursorAdd, new Vector2(cursorAdd.width / 2, cursorAdd.height / 2), CursorMode.Auto);
-
-        if (Input.GetMouseButtonDown(0))
+        if (Vector3.Distance(mushroom.transform.position, hpTransform.position) < hpReachDist)
         {
-            StartCoroutine(Intoxicated(2.5f, 2.5f, 0f));
-            mushroom.SetActive(false);
-        }
-            
+            Cursor.SetCursor(cursorAdd, new Vector2(cursorAdd.width / 2, cursorAdd.height / 2), CursorMode.Auto);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartCoroutine(Intoxicated(2.5f, 2.5f, 0f));
+                mushroom.SetActive(false);
+            }
+        }    
     }
 
     // https://gamedevbeginner.com/the-right-way-to-lerp-in-unity-with-examples
