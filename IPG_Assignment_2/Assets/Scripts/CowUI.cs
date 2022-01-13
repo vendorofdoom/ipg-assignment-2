@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CowUI : MonoBehaviour
 {
@@ -11,9 +12,29 @@ public class CowUI : MonoBehaviour
     public TMPro.TextMeshProUGUI textPinkFlowers;
     public TMPro.TextMeshProUGUI textOrangeFlowers;
 
+    public Button purpleButton;
+    public Button pinkButton;
+    public Button orangeButton;
+
     public FlowersCollection hpFlowers;
     public FlowerHUD flowerHUD;
     public Cow activeCow;
+
+    public float reachDist;
+
+
+    private void Update()
+    {
+
+        if (activeCow != null && cowStatsUI.gameObject.activeSelf)
+        {
+            bool canGiveFlowers = (Vector3.Distance(hpFlowers.transform.position, activeCow.transform.position) < reachDist);
+            purpleButton.interactable = canGiveFlowers && !activeCow.flowerCollection.HasEnough(Flower.FlowerType.Purple);
+            pinkButton.interactable = canGiveFlowers && !activeCow.flowerCollection.HasEnough(Flower.FlowerType.Pink);
+            orangeButton.interactable = canGiveFlowers && !activeCow.flowerCollection.HasEnough(Flower.FlowerType.Orange);
+        }
+        
+    }
 
     public void UpdateUI()
     {

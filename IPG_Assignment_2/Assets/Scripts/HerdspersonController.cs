@@ -48,6 +48,11 @@ public class HerdspersonController : MonoBehaviour
         navMeshAgent.SetDestination(Position);
     }
 
+    public void CancelMove()
+    {
+        navMeshAgent.ResetPath();
+    }
+
     private void SetNormalSpeed()
     {
         navMeshAgent.speed = normalSpeed;

@@ -88,7 +88,7 @@ public class Cow : MonoBehaviour
         currStatus = cowStatusOptions[Random.Range(0, cowStatusOptions.Count)];
     }
 
-    private void OnMouseDown()
+    public void Select()
     {
         hearts.Emit(1);
         cowUI.activeCow = this;

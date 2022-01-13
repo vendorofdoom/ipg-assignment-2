@@ -63,6 +63,13 @@ public class MouseControls : MonoBehaviour
     }
     private void HandleMouseInput()
     {
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Debug.Log("cancel!");
+            hpController.CancelMove();
+        }
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
@@ -90,7 +97,7 @@ public class MouseControls : MonoBehaviour
                     break;
 
                 case ("Cow"):
-                    Cursor.SetCursor(cursorInfo, Vector2.zero, CursorMode.Auto);
+                    CowMouseOver(hit.collider.gameObject);
                     break;
 
                 default:
@@ -104,6 +111,20 @@ public class MouseControls : MonoBehaviour
         else
         {
             Cursor.SetCursor(cursorPlain, Vector2.zero, CursorMode.Auto);
+        }
+    }
+
+
+    private void CowMouseOver(GameObject cow)
+    {
+        if (Vector3.Distance(cow.transform.position, hpTransform.position) < hpReachDist)
+        {
+            Cursor.SetCursor(cursorInfo, Vector2.zero, CursorMode.Auto);
+
+            if (Input.GetMouseButton(0))
+            {
+                cow.GetComponent<Cow>().Select();
+            }
         }
     }
 
