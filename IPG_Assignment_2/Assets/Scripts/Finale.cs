@@ -10,18 +10,23 @@ public class Finale : MonoBehaviour
     public Transform endTriggerSubject;
     public Transform endTriggerTarget;
     public float endTriggerDist;
+    private bool nextSceneTriggered = false;
+
+    public SceneChange sceneChange;
+
 
     private void Start()
     {
         text.CrossFadeAlpha(0f, 0f, true);
-        text.CrossFadeAlpha(1f, 5f, false);
+        text.CrossFadeAlpha(1f, 7f, false);
     }
 
     private void Update()
     {
-        if (Vector3.Distance(endTriggerSubject.position, endTriggerTarget.position) <= endTriggerDist)
+        if ((Vector3.Distance(endTriggerSubject.position, endTriggerTarget.position) <= endTriggerDist) && !nextSceneTriggered)
         {
-            SceneManager.LoadScene("StartMenu");
+            sceneChange.EndScene(6f);
+            nextSceneTriggered = true;
         }
     }
 }

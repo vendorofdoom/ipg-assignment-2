@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Signpost : MonoBehaviour
 {
     public bool endGameCriteriaMet = false;
     public List<Cow> Cows;
-
+    public SceneChange sceneChange;
 
     private void OnMouseDown()
     {
         if (endGameCriteriaMet)
         {
-            SceneManager.LoadScene("Ending");
+            sceneChange.EndScene(5f);
         }
         else
         {

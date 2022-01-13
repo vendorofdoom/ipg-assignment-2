@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayButton : MonoBehaviour
 {
+
+    public SceneChange sceneChange;
+
     public void PressPlay()
     {
-        SceneManager.LoadScene("Main");
+        sceneChange.EndScene(2f);
     }
 }
