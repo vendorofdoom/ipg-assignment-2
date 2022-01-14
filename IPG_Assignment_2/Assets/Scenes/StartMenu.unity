@@ -13917,7 +13917,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2177721890128925539}
-  - component: {fileID: 5249224993401194777}
   m_Layer: 9
   m_Name: Cow2
   m_TagString: Untagged
@@ -14656,7 +14655,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3389803414222326290}
-  - component: {fileID: 8785164882964975720}
   m_Layer: 9
   m_Name: Cow1
   m_TagString: Untagged
@@ -14893,25 +14891,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.062462613, y: 0.00857996, z: 0.0052067675}
     m_Extent: {x: 0.0047771204, y: 0.004663096, z: 0.0029613543}
   m_DirtyAABB: 0
---- !u!95 &2804142055605197521
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8881569260897917457}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 09483af6ce62501438e5a0ca31306ac3, type: 3}
-  m_Controller: {fileID: 9100000, guid: d4073c4c006df5f4daf93ba83aff3eeb, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &2909121386363903965
 Transform:
   m_ObjectHideFlags: 0
@@ -15140,7 +15119,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2744224853727495380}
-  - component: {fileID: 8139514308649557678}
   m_Layer: 9
   m_Name: Cow3
   m_TagString: Untagged
@@ -16394,25 +16372,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &5249224993401194777
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545581476430105049}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 896b8c640f0b1054b8337583837a0dd1, type: 3}
-  m_Controller: {fileID: 9100000, guid: b9cd566684fe9284c819d55bdbafff12, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5330518096196228882
 GameObject:
   m_ObjectHideFlags: 0
@@ -18293,25 +18252,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &8139514308649557678
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3269227794357919342}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 896b8c640f0b1054b8337583837a0dd1, type: 3}
-  m_Controller: {fileID: 9100000, guid: b9cd566684fe9284c819d55bdbafff12, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8202302339899621541
 GameObject:
   m_ObjectHideFlags: 0
@@ -18628,25 +18568,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &8785164882964975720
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2612317110727119016}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 896b8c640f0b1054b8337583837a0dd1, type: 3}
-  m_Controller: {fileID: 9100000, guid: b9cd566684fe9284c819d55bdbafff12, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8825601785378466689
 GameObject:
   m_ObjectHideFlags: 0
@@ -18687,7 +18608,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8073402184926560427}
-  - component: {fileID: 2804142055605197521}
   m_Layer: 0
   m_Name: Herdperson
   m_TagString: Untagged
