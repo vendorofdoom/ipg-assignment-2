@@ -80467,6 +80467,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 904798879}
     - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+      propertyPath: signPost
+      value: 
+      objectReference: {fileID: 2071147125}
+    - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
       propertyPath: textName
       value: 
       objectReference: {fileID: 473420516}
@@ -80482,6 +80486,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1945927957533240}
+    - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
+      propertyPath: herdsPerson
+      value: 
+      objectReference: {fileID: 543450651943610055}
     - target: {fileID: 2422875620979699785, guid: 0eb7ade006f9ef043a36f7ef39d8de62, type: 3}
       propertyPath: followTarget
       value: 
@@ -81095,6 +81103,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 358776124}
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+      propertyPath: signPost
+      value: 
+      objectReference: {fileID: 2071147125}
+    - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: textName
       value: 
       objectReference: {fileID: 473420516}
@@ -81110,6 +81122,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 358776123}
+    - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
+      propertyPath: herdsPerson
+      value: 
+      objectReference: {fileID: 543450651943610055}
     - target: {fileID: 2918817733138364549, guid: 7dec4a6a9371588409335a532ae1fae2, type: 3}
       propertyPath: followTarget
       value: 
@@ -81798,6 +81814,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1007630611}
     - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+      propertyPath: signPost
+      value: 
+      objectReference: {fileID: 2071147125}
+    - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
       propertyPath: textName
       value: 
       objectReference: {fileID: 473420516}
@@ -81813,6 +81833,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1851661110323948575}
+    - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
+      propertyPath: herdsPerson
+      value: 
+      objectReference: {fileID: 543450651943610055}
     - target: {fileID: 1851661111751834454, guid: e2dd5c1756056be43a89e024978f7e4a, type: 3}
       propertyPath: followTarget
       value: 
@@ -85066,6 +85090,22 @@ PrefabInstance:
       propertyPath: normalSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7554332483104611738, guid: 0d80a8a104b8f584d94efd9bbf9da1a1, type: 3}
+      propertyPath: herd.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554332483104611738, guid: 0d80a8a104b8f584d94efd9bbf9da1a1, type: 3}
+      propertyPath: herd.Array.data[0]
+      value: 
+      objectReference: {fileID: 358776120}
+    - target: {fileID: 7554332483104611738, guid: 0d80a8a104b8f584d94efd9bbf9da1a1, type: 3}
+      propertyPath: herd.Array.data[1]
+      value: 
+      objectReference: {fileID: 1007630607}
+    - target: {fileID: 7554332483104611738, guid: 0d80a8a104b8f584d94efd9bbf9da1a1, type: 3}
+      propertyPath: herd.Array.data[2]
+      value: 
+      objectReference: {fileID: 904798875}
     - target: {fileID: 7554332483104611738, guid: 0d80a8a104b8f584d94efd9bbf9da1a1, type: 3}
       propertyPath: normalAcceleration
       value: 8

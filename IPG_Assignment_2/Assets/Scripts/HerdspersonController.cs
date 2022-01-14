@@ -20,6 +20,8 @@ public class HerdspersonController : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip hornSound;
     public GameObject alpineHorn;
+    [SerializeField]
+    private List<Cow> herd;
 
 
     private float time;
@@ -96,6 +98,10 @@ public class HerdspersonController : MonoBehaviour
         alpineHorn.SetActive(true);
         navMeshAgent.velocity = Vector3.zero;
         navMeshAgent.isStopped = true;
+        foreach (Cow c in herd)
+        {
+            c.Beckon();
+        }
     }
 
     private void HornStop()
