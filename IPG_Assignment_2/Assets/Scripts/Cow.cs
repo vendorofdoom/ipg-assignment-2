@@ -120,9 +120,13 @@ public class Cow : MonoBehaviour
     private void StopAndSayMoo()
     {
         navMeshAgent.ResetPath();
-        audioSource.PlayDelayed(0.5f);
+        timeout = 5f;
         animator.SetTrigger("doMoo");
-        // TODO: Add moo sound
+    }
+
+    private void SayMoo()
+    {
+        audioSource.PlayOneShot(audioSource.clip); // Triggered by animation event
     }
 
 }

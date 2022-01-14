@@ -44,9 +44,6 @@ public class MouseControls : MonoBehaviour
 
     public LayerMask layerMask;
 
-    
-
-
     bool IsMouseOverGameWindow //https://answers.unity.com/questions/973606/how-can-i-tell-if-the-mouse-is-over-the-game-windo.html
     {
         get
@@ -74,13 +71,13 @@ public class MouseControls : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            Debug.Log("cancel!");
             hpController.CancelMove();
+            hpController.PlayAlpineHorn();
+            return;
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-
         if (Physics.Raycast(ray, out hit, 100f, layerMask) && !EventSystem.current.IsPointerOverGameObject()) // && !EventSystem.current.IsPointerOverGameObject() to check we're not over a UI element
         {
 
@@ -122,14 +119,13 @@ public class MouseControls : MonoBehaviour
         }
     }
 
-
     private void CowMouseOver(GameObject cow)
     {
         if (Vector3.Distance(cow.transform.position, hpTransform.position) < hpReachDist)
         {
             Cursor.SetCursor(cursorInfo, Vector2.zero, CursorMode.Auto);
 
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 cow.GetComponent<Cow>().Select();
             }
@@ -154,6 +150,7 @@ public class MouseControls : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 StartCoroutine(Intoxicated(2.5f, 2.5f, 0f));
+                audioSource.PlayOneShot(pickMushroomSound);
                 mushroom.SetActive(false);
             }
         }    

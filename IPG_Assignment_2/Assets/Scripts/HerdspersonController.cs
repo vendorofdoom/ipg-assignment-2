@@ -15,7 +15,11 @@ public class HerdspersonController : MonoBehaviour
     public bool speedModified = false;
     public float speedModifierTimeout = 5f;
 
-
+    [Header("Alpine Horn")]
+    public bool isPlayingHorn = false;
+    public AudioSource audioSource;
+    public AudioClip hornSound;
+    public GameObject alpineHorn;
 
 
     private float time;
@@ -31,7 +35,6 @@ public class HerdspersonController : MonoBehaviour
 
     private void Update()
     {
-        
         if (speedModified)
         {
             if (time < speedModifierTimeout)
@@ -83,7 +86,24 @@ public class HerdspersonController : MonoBehaviour
 
     public void PlayAlpineHorn()
     {
+        animator.SetTrigger("playHorn");
+    }
 
+    private void HornStart()
+    {
+        isPlayingHorn = true;
+        audioSource.PlayOneShot(hornSound); // Triggered by animation event
+        alpineHorn.SetActive(true);
+        navMeshAgent.velocity = Vector3.zero;
+        navMeshAgent.isStopped = true;
+    }
+
+    private void HornStop()
+    {
+        // Triggered by animation event
+        isPlayingHorn = false;
+        alpineHorn.SetActive(false);
+        navMeshAgent.isStopped = false;
     }
 }
 
