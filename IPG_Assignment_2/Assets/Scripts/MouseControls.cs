@@ -37,7 +37,15 @@ public class MouseControls : MonoBehaviour
     [Header("UI")]
     public CanvasGroup narrativeUI;
 
+    [Header("Sounds")]
+    public AudioSource audioSource;
+    public AudioClip pickFlowerSound;
+    public AudioClip pickMushroomSound;
+
     public LayerMask layerMask;
+
+    
+
 
     bool IsMouseOverGameWindow //https://answers.unity.com/questions/973606/how-can-i-tell-if-the-mouse-is-over-the-game-windo.html
     {
@@ -201,6 +209,7 @@ public class MouseControls : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 hpInventory.AddFlower(hit.collider.gameObject.GetComponent<Flower>().flowerType);
+                audioSource.PlayOneShot(pickFlowerSound, 0.5f);
                 hit.collider.gameObject.SetActive(false); // Flower picked so disappear!
                 flowerHUD.UpdateUI();
             }

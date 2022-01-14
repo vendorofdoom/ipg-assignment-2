@@ -35,6 +35,10 @@ public class Cow : MonoBehaviour
     [Header("Animation")]
     [SerializeField]
     private Animator animator;
+
+    [Header("Sound")]
+    [SerializeField]
+    private AudioSource audioSource;
     
     
 
@@ -91,6 +95,7 @@ public class Cow : MonoBehaviour
     public void Select()
     {
         hearts.Emit(1);
+        StopAndSayMoo();
         cowUI.activeCow = this;
         cowUI.UpdateUI();
         cowUI.DisplayUI();
@@ -110,6 +115,14 @@ public class Cow : MonoBehaviour
 
         navMeshAgent.destination = wanderDestinations[Random.Range(0, wanderDestinations.Count)];
 
+    }
+
+    private void StopAndSayMoo()
+    {
+        navMeshAgent.ResetPath();
+        audioSource.PlayDelayed(0.5f);
+        animator.SetTrigger("doMoo");
+        // TODO: Add moo sound
     }
 
 }

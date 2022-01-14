@@ -8,11 +8,16 @@ public class HerdspersonController : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private Animator animator;
 
+    [Header("Speed Modifiers")]
     private float normalSpeed;
     private float normalAngularSpeed;
     private float normalAcceleration;
     public bool speedModified = false;
     public float speedModifierTimeout = 5f;
+
+
+
+
     private float time;
 
     private void Awake()
@@ -74,6 +79,11 @@ public class HerdspersonController : MonoBehaviour
     public void ScaleVelocity(float scaleFactor)
     {
         navMeshAgent.velocity *= scaleFactor;
+    }
+
+    public void PlayAlpineHorn()
+    {
+
     }
 }
 
